@@ -8,15 +8,6 @@ export const events = [
     description:
       "Join us for our semester kickoff to learn about upcoming opportunities and meet the team.",
   },
-  {
-    title: "AI in Medicine Workshop",
-    date: "2025-10-15",
-    startTime: "15:00",
-    endTime: "17:00",
-    location: "Curry Ballroom",
-    description:
-      "A hands-on workshop exploring how AI is transforming healthcare research.",
-  },
 ];
 
 export const updates = [
