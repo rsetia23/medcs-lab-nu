@@ -53,7 +53,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="#"
+            href="https://www.instagram.com/medcslabnu/"
             target="_blank"
             className="hover:text-gray-300 transition"
             aria-label="Instagram"
