@@ -1,6 +1,6 @@
-import React from "react";
-import { events, updates } from "../assets/events";
+import React, { useEffect, useState } from "react";
 import { FaRegCalendarPlus } from "react-icons/fa";
+import client from "../sanityClient"; // Make sure this uses `createClient`
 
 const formatReadableDate = (isoDate) => {
   const [year, month, day] = isoDate.split("-").map(Number);
@@ -50,6 +50,30 @@ const getCalendarURL = (event) => {
 };
 
 const EventsAndUpdates = () => {
+  const [events, setEvents] = useState([]);
+  const [updates, setUpdates] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const eventsQuery = `*[_type == "event"] | order(date asc)`;
+        const updatesQuery = `*[_type == "update"] | order(date desc)`;
+
+        const [eventResult, updateResult] = await Promise.all([
+          client.fetch(eventsQuery),
+          client.fetch(updatesQuery),
+        ]);
+
+        setEvents(eventResult);
+        setUpdates(updateResult);
+      } catch (error) {
+        console.error("Sanity fetch error:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <section id="events" className="w-full bg-gray-50 text-gray-900 px-6 py-20">
       <h2 className="text-3xl font-bold text-center text-medcsblue mb-12">
@@ -104,7 +128,9 @@ const EventsAndUpdates = () => {
                 className="bg-white p-6 rounded-lg shadow hover:shadow-md transition"
               >
                 <h4 className="text-xl font-bold text-medcsblue">{update.title}</h4>
-                <p className="text-sm text-gray-600 italic">{update.date}</p>
+                <p className="text-sm text-gray-600 italic">
+                  {formatReadableDate(update.date)}
+                </p>
                 <p className="mt-2 text-gray-800">{update.description}</p>
               </div>
             ))}

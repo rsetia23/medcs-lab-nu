@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Intro from "./components/Intro";
 import OurTeam from "./components/OurTeam";
 import Projects from "./components/Projects";
+import UpcomingEvent from "./components/UpcomingEvent";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Intro />
       <About />
       <EventsAndUpdates />
+      {/* <UpcomingEvent /> */}
       <Projects />
       <OurTeam />
       <Footer />
