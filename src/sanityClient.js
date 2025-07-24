@@ -1,9 +1,8 @@
-// src/sanityClient.js
 import { createClient } from "@sanity/client";
 
 export default createClient({
-  projectId: "vb5kghfa",
-  dataset: "production",
-  apiVersion: "2025-07-24",
+  projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
+  dataset: import.meta.env.VITE_SANITY_DATASET,
+  apiVersion: import.meta.env.VITE_SANITY_API_VERSION,
   useCdn: true,
 });
