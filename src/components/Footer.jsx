@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaLinkedin, FaInstagram, FaRegCopy, FaCheck } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaDiscord, FaRegCopy, FaCheck } from "react-icons/fa";
 
 const Footer = () => {
   const email = "medcslab@gmail.com";
@@ -59,6 +59,15 @@ const Footer = () => {
             aria-label="Instagram"
           >
             <FaInstagram size={20} />
+          </a>
+
+          <a
+            href="https://discord.gg/FbuMFxdsQa"
+            target="_blank"
+            className="hover:text-gray-300 transition"
+            aria-label="Instagram"
+          >
+            <FaDiscord size={20} />
           </a>
         </div>
       </div>
