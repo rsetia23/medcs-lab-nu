@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaLinkedin, FaInstagram, FaDiscord, FaRegCopy, FaCheck } from "react-icons/fa";
+import { SiGooglecalendar } from "react-icons/si";
 
 const Footer = () => {
   const email = "medcslab@gmail.com";
@@ -65,9 +66,19 @@ const Footer = () => {
             href="https://discord.gg/FbuMFxdsQa"
             target="_blank"
             className="hover:text-gray-300 transition"
-            aria-label="Instagram"
+            aria-label="Discord"
           >
             <FaDiscord size={20} />
+          </a>
+
+
+           <a
+            href="https://calendar.google.com/calendar/u/2?cid=bWVkY3NsYWJAZ21haWwuY29t"
+            target="_blank"
+            className="hover:text-gray-300 transition"
+            aria-label="Google Calendar"
+          >
+            <SiGooglecalendar size={20} />
           </a>
         </div>
       </div>

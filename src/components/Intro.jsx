@@ -7,7 +7,7 @@ const Intro = () => {
       <img
         src="/medcs-lab-logo.svg"
         alt="MedCS Lab Logo"
-        className="w-40 h-40 mb-4 p-2 rounded"
+        className="w-40 h-40 mb-4"
       />
       <h1 className="text-4xl font-bold">MedCS Lab</h1>
       <p className="text-lg mt-2">
