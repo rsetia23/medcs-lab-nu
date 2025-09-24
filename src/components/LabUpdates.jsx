@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import client from "../sanityClient"; // Make sure this uses `createClient`
 
-const Projects = () => {
+const LabUpdates = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const Projects = () => {
       className="w-full bg-white text-gray-900 px-6 py-20"
     >
       <h2 className="text-3xl font-bold text-center text-medcsblue mb-12">
-        Projects
+        Lab Updates
       </h2>
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
@@ -67,4 +67,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default LabUpdates;
