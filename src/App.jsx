@@ -1,5 +1,5 @@
 import About from "./components/About";
-import Events from "./components/Events";
+import EventsPage from "./components/EventsPage";
 import Footer from "./components/Footer";
 import Intro from "./components/Intro";
 import OurTeam from "./components/OurTeam";
@@ -11,7 +11,7 @@ function App() {
     <div>
       <Intro />
       <About />
-      <Events />
+      <EventsPage />
       <LabUpdates />
       <OurTeam />
       <NewsletterSignup />
